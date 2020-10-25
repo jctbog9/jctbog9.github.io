@@ -5,25 +5,36 @@
         <div>
           John Trocchi - Web Developer
         </div>
-        <div class="sidebar-link">
-          Sidebar
+        <div class="sidebar-link" v-on:click="changeLink('Sidebar 1')">
+          Sidebar 1
         </div>
-        <div class="sidebar-link">
-          Sidebar
+        <div class="sidebar-link" v-on:click="changeLink('Sidebar 2')">
+          Sidebar 2
         </div>
-        <div class="sidebar-link">
-          Sidebar
+        <div class="sidebar-link" v-on:click="changeLink('Sidebar 3')">
+          Sidebar 3
         </div>
       </div>
       <div>
-        This is the layout
+        <div>
+          {{content}}
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import { mapMutations, mapState } from 'vuex'
+
+export default {
+  computed: {
+    ...mapState(['content']) 
+  },
+  methods: {
+    ...mapMutations(['changeLink'])
+  }
+}
 </script>
 
 <style>
