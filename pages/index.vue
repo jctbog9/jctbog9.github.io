@@ -2,17 +2,24 @@
   <div>
     <div class="layout">
       <div class="sidebar">
-        <div>
-          John Trocchi - Web Developer
+        <div class="profile-image-container">
+          <img class="profile-image" src="/profile.jpeg" v-on:click="changeLink('Profile')">
+          <h2>John Trocchi</h2>
         </div>
-        <div class="sidebar-link" v-on:click="changeLink('Sidebar 1')">
-          Sidebar 1
+        <div id="Profile" class="sidebar-link" v-on:click="changeLink('Profile')">
+          <div>
+            <font-awesome-icon icon="user-circle"/> Profile
+          </div>
         </div>
-        <div class="sidebar-link" v-on:click="changeLink('Sidebar 2')">
-          Sidebar 2
+        <div id="Portfolio" class="sidebar-link" v-on:click="changeLink('Portfolio')">
+          <div>
+            <font-awesome-icon icon="book"/> Portfolio
+          </div>
         </div>
-        <div class="sidebar-link" v-on:click="changeLink('Sidebar 3')">
-          Sidebar 3
+        <div id="Resume" class="sidebar-link" v-on:click="changeLink('Resume')">
+          <div>
+            <font-awesome-icon icon="file"/> Resume
+          </div>
         </div>
       </div>
       <div>
@@ -28,6 +35,11 @@
 import { mapMutations, mapState } from 'vuex'
 
 export default {
+  data() {
+    return {
+      activeLink: 'Profile'
+    }
+  },
   computed: {
     ...mapState(['content']) 
   },
@@ -48,7 +60,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 260px;
-  background-color: #509ACD;
+  background-color: #6db0dd;
 }
 
 .sidebar-link {
@@ -56,12 +68,33 @@ export default {
   flex-direction: column;
   height: 65px;
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   justify-content: center;
 }
 
 .sidebar-link:hover {
   cursor: pointer;
-  background-color: #3a81b1;
+  background-color: #509ACD;
+}
+
+.profile-image {
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.profile-image-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-image:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }
 </style>
