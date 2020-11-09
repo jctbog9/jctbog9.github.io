@@ -1,6 +1,5 @@
 {
   "name": "johnny-portfolio",
-  "homepage": "https://jctbog9.github.io/john-trocchi/",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -17,8 +16,5 @@
     "@nuxtjs/fontawesome": "^1.1.2",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6"
-  },
-  "devDependencies": {
-    "push-dir": "^0.4.1"
   }
 }
