@@ -12,6 +12,11 @@ export default {
     ]
   },
 
+  target: 'static',
+  router: {
+    base: '/john-trocchi/'
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
