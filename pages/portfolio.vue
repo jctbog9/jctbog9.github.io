@@ -10,10 +10,13 @@
       <contact-card 
         title="Pizza Roma"
         :image="images[0]"
+        codeURL="https://github.com/jctbog9/pizza-roma"
+        projectURL="https://pizzaroma-ui.herokuapp.com/"
       />
       <contact-card 
         title="Chess"
         :image="images[1]"
+        codeURL="https://github.com/jctbog9/boardgames/tree/master/client"
       />
     </div>
     <div class="section-title">
@@ -23,6 +26,13 @@
       <contact-card 
         title="Calendar Application"
         :image="images[2]"
+        codeURL="https://github.com/jctbog9/Calendar-Me"
+        projectURL="http://kingbishopcalendar.herokuapp.com/"
+      />
+      <contact-card 
+        title="LaunchQL"
+        :image="images[3]"
+        codeURL="https://github.com/jctbog9/launchql"
       />
     </div>
   </div>
@@ -33,12 +43,13 @@ import ContactCard from '../components/ContactCard'
 import PizzaRoma from '../static/roma_preview.png'
 import Chess from '../static/chess.png'
 import Calendar from '../static/calendar.png'
+import GraphQL from '../static/graphql.png'
 
 export default {
   components: { ContactCard },
   data() {
     return {
-      images: [ PizzaRoma, Chess, Calendar ]
+      images: [ PizzaRoma, Chess, Calendar, GraphQL ]
     }
   }
 }

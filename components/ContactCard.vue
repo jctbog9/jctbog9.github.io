@@ -1,10 +1,16 @@
 <template>
   <div class="contact-card-container">
-    <img :src="image" class="contact-card">
-    {{title}}
+    <div class="project-title">{{title}}</div>
+    <div class="contact-card-border">
+      <img :src="image" class="contact-card">
+    </div>
     <div class="CTA-options">
-      <button>Code</button>
-      <button>View Example</button>
+      <a :href="codeURL" target="_blank">
+        <button>Code</button>
+      </a>
+      <a v-if="projectURL" :href="projectURL" target="_blank">
+        <button>View Example</button>
+      </a>   
     </div>
   </div>
 </template>
@@ -14,7 +20,9 @@ export default {
   name: 'ContactCard',
   props: {
     title: '',
-    image: ''
+    image: '',
+    codeURL: '',
+    projectURL: ''
   }
 }
 </script>
@@ -22,15 +30,29 @@ export default {
 <style>
 .contact-card {
   width: 420px;
-  margin: 50px;
-  border: 1px solid #000000;
   overflow: hidden;
+}
+
+.contact-card-border {
+  display: flex;
+  height: 370px;
+  overflow: hidden;
+  align-items: center;
+  margin: 20px 50px;
 }
 
 .contact-card-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 800px;
+  text-decoration: underline;
 }
 </style>
