@@ -13,6 +13,7 @@ export default {
 
 <style>
 .resume {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;

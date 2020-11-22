@@ -1,6 +1,6 @@
 <template>
   <div>
-    Splashpage
+    <nuxt-link to='/portfolio'>Go to portfolio</nuxt-link>
   </div>
 </template>
 
