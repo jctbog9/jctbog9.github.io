@@ -62,7 +62,7 @@ export default {
   display: flex;
   width: 100%;
   height: 100%;
-  background-image:url('https://wallpapercave.com/wp/wp6446391.jpg');
+  background-image:url('/wallpaper.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
