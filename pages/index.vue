@@ -1,5 +1,9 @@
 <template>
   <div class="splash-page-container">
+    <div class="top-bar">
+      <div class="top-left">John Trocchi</div>
+      <div class="top-right">Web Developer/ Entreprenuer</div>
+    </div>
     <div class="drop-container">
       <img src="/profile.jpeg" alt="" class="drop">
       <button class="margin">
@@ -17,12 +21,33 @@ export default {
 </script>
 
 <style>
+.top-left,
+.top-right {
+  display: flex;
+  height: 60px;
+  margin: 20px 40px;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  opacity: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+  animation: appear 2.5s 3s forwards;
+}
+
 .margin {
   position: absolute;
   opacity: 0;
   top: 200px;
   margin: 40px;
-  animation: appear 3s 3.5s forwards;
+  animation: appear 2.5s 3s forwards;
   background-color: #ffffff;
 }
 
@@ -35,12 +60,12 @@ export default {
 
 .splash-page-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #6db0dd;
+  background-image:url('https://wallpapercave.com/wp/wp6446391.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Test */

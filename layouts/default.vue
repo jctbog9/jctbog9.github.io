@@ -113,6 +113,6 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #e069d0;
+  background-color: #aaa8a8;
 }
 </style>
